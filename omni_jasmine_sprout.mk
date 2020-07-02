@@ -86,7 +86,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 	
 TARGET_VENDOR_PRODUCT_NAME := jasmine
 
-BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:10/QKQ1.190910.002/V11.0.5.0.QDIMIXM:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:10/QKQ1.190910.002/V11.0.11.0.QDIMIXM:user/release-keys"
 
 # Maintainer Prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
