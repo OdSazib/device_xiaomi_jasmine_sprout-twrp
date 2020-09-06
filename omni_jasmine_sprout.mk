@@ -64,7 +64,11 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service \
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2025-12-31
+    ro.vendor.build.security_patch=2025-12-31 \
+    ro.hardware.keystore=sdm660 \
+    sys.usb.controller=a800000.dwc3 \
+    sys.usb.rndis.func.name=rndis_bam \
+    sys.usb.rmnet.func.name=rmnet_bam
 
 # Device identifier. This must come after all inclusions
 PRODUCT_PLATFORM := SDM660
@@ -90,4 +94,4 @@ BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:10/QKQ1.190910.002/V11.0.11.
 
 # Maintainer Prop
 PRODUCT_BUILD_PROP_OVERRIDES += \
-DEVICE_MAINTAINERS="Manish4586"
+DEVICE_MAINTAINERS="OdSazib"
