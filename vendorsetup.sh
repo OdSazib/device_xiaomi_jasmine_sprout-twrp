@@ -1,1 +1,1 @@
-add_lunch_combo omni_wayne-eng
+add_lunch_combo omni_jasmine_sprout-eng
