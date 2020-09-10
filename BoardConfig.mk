@@ -48,6 +48,7 @@ BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 BOARD_HAS_REMOVABLE_STORAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
@@ -61,8 +62,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
-TW_MAX_BRIGHTNESS := 100
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_EXTRA_LANGUAGES := true
 TW_NO_SCREEN_BLANK := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -77,6 +77,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT_DIR}/target/product/jasmine_sprout/
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_USE_TOOLBOX := true
+TW_EXCLUDE_TWRPAPP := true
 
 # Security Patch Hack to prevent Anti Rollback
 PLATFORM_SECURITY_PATCH := 2025-12-31
@@ -85,11 +86,15 @@ ALLOW_MISSING_DEPENDENCIES := true
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-BOARD_USES_METADATA_PARTITION := true
+#TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
+#TARGET_HW_DISK_ENCRYPTION := true
 
 # A/B partition device flags
 #TARGET_NO_KERNEL := false
 #TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 AB_OTA_UPDATER := true
+
+# Debug
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
